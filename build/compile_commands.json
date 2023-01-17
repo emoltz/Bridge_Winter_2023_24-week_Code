@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu++17 -o CMakeFiles/winter_2023_24week_code.dir/main.cpp.o -c \"/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/main.cpp\"",
+  "file": "/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/main.cpp"
+},
+{
+  "directory": "/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu++17 -o CMakeFiles/January4.dir/EthanOH/January4.cpp.o -c \"/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/EthanOH/January4.cpp\"",
+  "file": "/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/EthanOH/January4.cpp"
+}
+]

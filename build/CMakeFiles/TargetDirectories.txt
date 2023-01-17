@@ -1,0 +1,4 @@
+/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/build/CMakeFiles/winter_2023_24week_code.dir
+/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/build/CMakeFiles/January4.dir
+/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/build/CMakeFiles/edit_cache.dir
+/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/build/CMakeFiles/rebuild_cache.dir

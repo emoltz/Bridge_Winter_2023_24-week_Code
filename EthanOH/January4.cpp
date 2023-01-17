@@ -2,6 +2,10 @@
 using namespace std;
 
 int main() {
-    cout << "Hello, from GitHub!!" << endl;
+    cout << "Type two numbers";
+    int y, z;
+    cin >> y;
+    cin >> z;
+
     return 0;
 }

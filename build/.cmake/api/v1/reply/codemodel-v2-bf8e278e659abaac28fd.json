@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "winter_2023_24week_code",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "January4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-January4-Debug-1755291a015ecb9a9d05.json",
+					"name" : "January4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "winter_2023_24week_code::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-winter_2023_24week_code-Debug-4a59e0d03b2168ce8a43.json",
+					"name" : "winter_2023_24week_code",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code/build",
+		"source" : "/Users/ethanshafranmoltz/Documents/NYU/Bridge/Bridge 2023/winter_2023_24week_code"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
