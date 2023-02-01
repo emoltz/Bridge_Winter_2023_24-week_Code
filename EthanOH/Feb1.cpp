@@ -59,11 +59,9 @@ void triangle() {
     }
 }
 
-
-int main() {
-
-    char star = '*';
-    char space = '_';
+void diamond(){
+     char star = '*';
+    char space = ' ';
     int spacesLimit = 3;
     int starLimit = 1;
     // 7 lines = input * 2 - 1
@@ -77,7 +75,7 @@ int main() {
 
     for (int lineCounter = 0; lineCounter < (input * 2 - 1); lineCounter++) {
         // print the outside spaces
-        cout << lineCounter + 1 << ": ";
+//        cout << lineCounter + 1 << ": ";
 
         for (int j = 0; j < spacesLimit; j++) {
             cout << space;
@@ -135,10 +133,15 @@ int main() {
 //            spacesLimit--;
 //            starLimit += 2;
 //        }
-
-
     }
+}
 
+int main() {
+    int n = 356;
+
+    cout << n / 10;
+    cout << endl;
+    cout << n % 10;
 
     return 0;
 }
