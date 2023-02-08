@@ -48,6 +48,7 @@ int main(){
 
             cout << frame; // end of row frame
         }
+        // THE BUGS ARE HERE
         if (i > n/2){
             spaceLimit1--;
             spaceLimit2 += 2;
