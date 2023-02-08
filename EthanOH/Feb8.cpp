@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+
+// THIS IS ALMOST COMPLETE! SEE IF YOU CAN FINISH IT :)
+
+
 int main(){
     int n = 10;
 
