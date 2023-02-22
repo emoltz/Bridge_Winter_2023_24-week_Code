@@ -41,13 +41,28 @@ void badSwap(int a, int b){
     b = temp;
 }
 
+void array1(){
+    int arr[5] = {1, 2, 3, 4, 5};
+    cout << arr << endl;
+}
+
 int main() {
+    array1();
     int a = 5;
     int b = 10;
-//    swap(a, b);
-    badSwap(a, b);
+    int* x = &a;
+    cout << "x: " << *x << endl;
+    *x = 100;
+
+    cout << "x: " << *x << endl;
+    cout << "a: " << a << endl;
+
+
+    swap(a, b);
+//    badSwap(a, b);
     cout << "a: " << a << endl;
     cout << "b: " << b << endl;
+
 
     return 0;
 }
