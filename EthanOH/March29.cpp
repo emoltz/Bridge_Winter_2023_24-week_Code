@@ -50,7 +50,7 @@ void cars() {
 
 class Pet {
 private:
-    int _age;
+    int _age = 0;
     string _name;
     double _weight;
 protected:
@@ -60,12 +60,21 @@ public:
         _age = 0;
     }
 
+    void incrementAge() {
+        _age++;
+
+    }
+
     void setAge(int newAge) {
         _age = newAge;
     }
 
     void setName(string newName) {
         _name = newName;
+    }
+
+    string getName() {
+        return _name;
     }
 
     virtual void speak() = 0;
@@ -104,7 +113,20 @@ public:
         cout << "Woof!";
     }
 
+    friend ostream &operator<<(ostream &os, Dog &pet);
+
+    Dog operator++() {
+        this->incrementAge();
+        return *this;
+    }
 };
+
+ostream &operator<<(ostream &os, Dog &pet) {
+    string name = pet.getName();
+    os << name;
+    return os;
+
+}
 
 class Cat : public Pet {
 private:
@@ -138,10 +160,8 @@ public:
 int main() {
     Dog crunchy("Crunchy", 10);
     Cat cheese("Cheese");
-    crunchy.speak();
-    cheese.speak();
-    Bird beyonce;
-
+    cout << crunchy;
+    ++crunchy;
 
     return 0;
 }
