@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// Object Oriented Programming OOP
+// Object-Oriented Programming OOP
 class Car {
 private:
     double _weight;
@@ -43,8 +43,6 @@ void cars() {
 
     chevy.displayWeight();
     tesla.displayWeight();
-
-
 }
 
 
@@ -134,8 +132,12 @@ private:
     int clawSize;
     bool stealthMode;
 public:
-    Cat(string newName) {
+    Cat(const string& newName) {
         this->setName(newName);
+    }
+
+    void speakName(){
+        cout << this->getName();
     }
 
     virtual void speak() {
@@ -157,11 +159,19 @@ public:
     }
 };
 
-int main() {
+void main2(){
     Dog crunchy("Crunchy", 10);
     Cat cheese("Cheese");
     cout << crunchy;
     ++crunchy;
+}
+
+int main() {
+    Cat cheese("Cheese");
+    Cat roger("Roger");
+    cheese.speak();
+    roger.speak();
+
 
     return 0;
 }
