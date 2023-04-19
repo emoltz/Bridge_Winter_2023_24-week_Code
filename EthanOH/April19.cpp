@@ -47,7 +47,7 @@ int aLittleMoreAdvancedReadIn() {
     return 0;
 }
 
-int main() {
+int getLineDemo() {
     ifstream in_stream; //read IN
     ofstream out_stream; // write OUT
 
@@ -61,7 +61,7 @@ int main() {
         in_stream.open(filePath);
         out_stream.open(outFilePath);
     }
-    catch (const exception& e){
+    catch (const exception &e) {
         cout << e.what() << endl;
         // AND/OR make code that re-prompts the user for the file path
         return 1;
@@ -75,6 +75,7 @@ int main() {
 
     char c;
     while (getline(in_stream, currLine)) {
+
         for (int i = 0; i < currLine.length(); i++) {
             if (currLine[i] != ' ') {
                 out_stream << currLine[i];
@@ -85,5 +86,33 @@ int main() {
     out_stream << "This is some output!";
 
     in_stream.close();
+}
+
+int main() {
+    ifstream in_stream;
+    ofstream out_stream;
+
+    string inputFile = "input.txt";
+    in_stream.open(inputFile);
+    out_stream.open("output.txt");
+
+    if (!in_stream) {
+        cout << "Error";
+        return 1;
+    }
+
+    char c;
+    vector<int> allNumbers;
+    string currLine;
+    int currNum;
+    while (getline(in_stream, currLine)) {
+        for (int i = 2; i < currLine.length(); i++) {
+            c = currLine[i];
+            out_stream << c;
+        }
+        out_stream << "\n";
+    }
+
+
     return 0;
 }
