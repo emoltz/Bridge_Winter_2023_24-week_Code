@@ -27,7 +27,6 @@ int aLittleMoreAdvancedReadIn() {
     string outFilePath = "new file path here";
     in_stream.open(filePath);
     out_stream.open(outFilePath);
-    // best practices
 
     // check to make sure the opening of the file did not fail
     if (!in_stream) {
@@ -39,8 +38,9 @@ int aLittleMoreAdvancedReadIn() {
     char c;
     while (in_stream) {
         c = in_stream.get();
-        out_stream << c;
-        // do whatever you want with this here!
+        if (c != ' ' && c != '_') {
+            out_stream << c;
+        }
     }
 
     out_stream << "This is some output!";
@@ -48,6 +48,42 @@ int aLittleMoreAdvancedReadIn() {
 }
 
 int main() {
+    ifstream in_stream; //read IN
+    ofstream out_stream; // write OUT
 
+    string filePath = "this is a filepath";
+    string outFilePath = "new file path here";
+
+    // best practices
+
+    // check to make sure the opening of the file did not fail
+    try {
+        in_stream.open(filePath);
+        out_stream.open(outFilePath);
+    }
+    catch (const exception& e){
+        cout << e.what() << endl;
+        // AND/OR make code that re-prompts the user for the file path
+        return 1;
+    }
+
+    if (!in_stream) {
+        cout << "Error!";
+        return 1;
+    }
+    string currLine;
+
+    char c;
+    while (getline(in_stream, currLine)) {
+        for (int i = 0; i < currLine.length(); i++) {
+            if (currLine[i] != ' ') {
+                out_stream << currLine[i];
+            }
+        }
+    }
+
+    out_stream << "This is some output!";
+
+    in_stream.close();
     return 0;
 }
