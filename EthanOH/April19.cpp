@@ -18,7 +18,6 @@ void basicReadIn() {
     file.close();
 }
 
-
 int aLittleMoreAdvancedReadIn() {
     ifstream in_stream; //read IN
     ofstream out_stream; // write OUT
