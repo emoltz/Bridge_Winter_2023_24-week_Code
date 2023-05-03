@@ -1,6 +1,38 @@
 #include <iostream>
-
+#include <stack>
+#include <deque>
+#include <queue>
+#include <vector>
+#include <list>
+#include <iterator>
+#include <algorithm>
+#include <cmath>
 using namespace std;
+
+#define RED 0
+#define BLACK 1
+
+template <class T>
+class RBTNode{
+public:
+    RBTNode<T> *parent, *left, *right;
+    T data;
+    int color;
+
+    RBTNode(T data) : data(data), color(RED), parent(nullptr), left(nullptr), right(nullptr){};
+};
+
+template <class T>
+class RBT{
+public:
+    RBTNode<T> *root;
+
+    RBT() : root(nullptr) {}
+
+    // insert would check to see if there is a tree, then if no tree, insert as root and set children/parent pointers to null
+};
+
+
 
 class Node;
 
@@ -135,56 +167,24 @@ public:
     }
 };
 
-void instantiateNodes() {
-    LinkedList aprilExpenses;
-    // a file of numbers
-    // while we can read that file, process each number
+int main(){
+    vector<int> v;
+    v.push_back(50);
+    v.push_back(10);
 
-    aprilExpenses.addNode(10, "Lunch");
-    aprilExpenses.addNode(100, "shoes");
-    aprilExpenses.addNode(120, "shoes");
-}
+    vector<int>::iterator itr;
 
-template <class T>
-T add(T x, T y){
-    return x + y;
-}
-
-template <class T, class L>
-class Dog{
-public:
-    T data;
-    Dog(T n){
-        data = n;
+    for (itr = v.begin(); itr != v.end(); itr++){
+        cout << *itr << endl;
     }
-    L onestring;
-    L name;
-    T age;
-};
 
+    cout << endl;
 
-template <class T>
-class TemplateClass{
-public:
-    T data;
-    string name;
-
-    TemplateClass(T n, string newName){
-        data =  n;
-        name = newName;
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << endl;
     }
-};
 
-int main() {
 
-    TemplateClass<int> newClass(5, "Shoes");
-
-    double x = 10;
-    double y = 100.32;
-    add(x, y);
-    int f = 100;
-    int l = 450;
-    add(f, l);
 
     return 0;
 }
