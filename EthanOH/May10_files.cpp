@@ -7,17 +7,12 @@ using namespace std;
 
 class TreeNode {
 public:
-    int val;
+    int key;
+    string name;
     TreeNode *left;
     TreeNode *right;
 
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
-
-class BST{
-public:
-    BST();
-    void insert(int x);
+    TreeNode(int x) : key(x), left(nullptr), right(nullptr) {}
 };
 
 
@@ -25,7 +20,6 @@ int main() {
     ifstream file;
     ofstream outFile;
     file.open("input.txt");
-    BST bst;
 
     // ALWAYS check to make sure the file opened correctly
     if (!file) {
@@ -36,21 +30,19 @@ int main() {
     outFile.open("output.txt");
 
     char c;
+    string s;
+    string currNumber;
     vector<char> v;
     vector<int> v_ints;
 
-    while (file.get(c)) {
-        // only grab numbers
-        if (c != ' ') {
-            int i = digittoint(c);
-            bst.insert(i);
+    while (getline(file, s)) {
+        for (int i = 0; i < s.size(); i++) {
+            if (s[i] != ' ') {
+                outFile << s[i];
+            }
         }
+        outFile << endl;
     }
-
-    for (int i = 0; i < v_ints.size(); i++) {
-        outFile << v_ints[i] << "|";
-    }
-
 
     file.close();
 
